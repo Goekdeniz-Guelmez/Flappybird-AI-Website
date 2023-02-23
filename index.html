@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspi Projekt - GG</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="network.js"></script>
+    <script type="text/javascript" src="bird.js"></script>
+    <script type="text/javascript" src="generation.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="dashboard.js"></script>
+    <script type="text/javascript" src="animation.js"></script>
+    <script type="text/javascript" src="image_manager.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+    <h1 class="vcr cursor-none">KI lernt Pac-Man</h1>
+    <div id="main-game">
+
+        <div id="canvas-div">
+            <canvas id="canvas" width="336" height="512"></canvas>
+        </div>
+
+        <div id="control-div">
+            <div>
+                <h2>Generation <span id="generation-num">1</span></h2>
+                <div>
+                    <table class="score-table">
+                        <thead>
+                            <th>ID</th>
+                            <th>Fitness</th>
+                            <th>Score</th>
+                        </thead>
+                        <tbody id="score">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <h2>History</h2>
+                <div id="history-div">
+                    <table class="score-table">
+                        <thead>
+                            <th>Gen</th>
+                            <th>Fitness</th>
+                            <th>Score</th>
+                        </thead>
+                        <tbody id="history">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <br>
+                <input type="checkbox" id="enable-animation" />Enable Animation
+            </div>
+
+            <div>
+                <br>
+                <input type="checkbox" id="show-pipe" />Show Next Pipe
+            </div>
+
+            <hr>
+
+            <div>
+                <input type="checkbox" id="see-two-pipe" />**Foresee Next Two Pipes (instead of one)
+            </div>
+
+            <div>
+                **Activation
+                <select id="activation-function">
+                    <option value="custom">Custom Tangent</option>
+                    <option value="arctan">Arctan</option>
+                    <option value="hyperbolic">Hyperbolic Tangent</option>
+                    <option value="sigmoid">Sigmoid</option>
+                    <option value="relu">ReLu</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <div>
+                *Population
+                <select id="pop-size">
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                    <option value="70">70</option>
+                    <option value="100">100</option>
+                </select><br><br>
+                *Überlbensate
+                <select id="survive-rate">
+                    <option value="0.05">5%</option>
+                    <option value="0.1">10%</option>
+                    <option value="0.15">15%</option>
+                    <option value="0.2">20%</option>
+                    <option value="0.3">30%</option>
+                    <option value="0.4">40%</option>
+                    <option value="0.5">50%</option>
+                </select>
+            </div>
+
+            <div>
+                *Mutation
+                <select id="mutate-chance">
+                    <option value="0.01">1%</option>
+                    <option value="0.05">5%</option>
+                    <option value="0.1">10%</option>
+                    <option value="0.2">20%</option>
+                    <option value="0.3">30%</option>
+                    <option value="0.4">40%</option>
+                    <option value="0.5">50%</option>
+                    <option value="0.6">60%</option>
+                    <option value="0.7">70%</option>
+                </select><br><br>
+            </div>
+
+            <hr>
+
+            <div>
+                Schnelligkeit
+                <select id="scroll-speed">
+                    <option value="2">Slow</option>
+                    <option value="2.5">Normal</option>
+                    <option value="3">Fast</option>
+                    <option value="3.5">Very fast</option>
+                    <option value="4">Extreme</option>
+                </select>
+            </div>
+
+            <div>
+                Simulationsschnelligkeit
+                <select id="sim-speed">
+                    <option value="40">Sher langsam</option>
+                    <option value="24">langsam</option>
+                    <option value="12">Normal</option>
+                    <option value="7">Schnell</option>
+                    <option value="0">Sehr Schnell</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <p class="vcr text-unten">Red bird is the best individual of the last generation. Yellow birds are other birds of the last generation. Blue birds are new-born birds. <a href="https://youtu.be/xvFZjo5PgG0">Link</a></p>
+    <p class="vcr text-unten">Note: The changes of the "*" options will be effective only after the current generation is over; The changes of the "**" options will be effective only for new-born birds.</p>
+</body>
+</html>
