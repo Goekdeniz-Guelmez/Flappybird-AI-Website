@@ -67,4 +67,4 @@ Finally, the program defines an object called "Activation", which contains vario
 
 ## <h2 align="center">Author</h2>
 
-- [@Goku-bot](https://github.com/Goku-bot/)
+- <p align="center">[@Goku-bot](https://github.com/Goku-bot/)</p>
