@@ -46,7 +46,7 @@
                 <div id="history-div">
                     <table class="score-table">
                         <thead>
-                            <th>Gen</th>
+                            <th>Generation</th>
                             <th>Fitness</th>
                             <th>Score</th>
                         </thead>
@@ -56,23 +56,19 @@
                 </div>
             </div>
 
-            <div>
+            <div style="display:none">
                 <br>
                 <input type="checkbox" id="enable-animation" />Enable Animation
             </div>
 
             <div>
                 <br>
-                <input type="checkbox" id="show-pipe" />Show Next Pipe
-            </div>
-
-            <hr>
-
-            <div>
+                <input type="checkbox" id="show-pipe" style="margin-bottom: 20%;"/>Show Next Pipe
+                <br>
                 <input type="checkbox" id="see-two-pipe" />**Foresee Next Two Pipes (instead of one)
             </div>
 
-            <div>
+            <div style="display:none">
                 **Activation
                 <select id="activation-function">
                     <option value="custom">Custom Tangent</option>
@@ -82,10 +78,9 @@
                     <option value="relu">ReLu</option>
                 </select>
             </div>
-
             <hr>
 
-            <div>
+            <div style="margin-top: 2%;">
                 *Population
                 <select id="pop-size">
                     <option value="15">15</option>
@@ -95,7 +90,7 @@
                     <option value="100">100</option>
                 </select><br><br>
                 *Überlbensate
-                <select id="survive-rate">
+                <select id="survive-rate" style="margin-top: 20%;">
                     <option value="0.05">5%</option>
                     <option value="0.1">10%</option>
                     <option value="0.15">15%</option>
@@ -106,7 +101,7 @@
                 </select>
             </div>
 
-            <div>
+            <div style="margin-top: 2%;">
                 *Mutation
                 <select id="mutate-chance">
                     <option value="0.01">1%</option>
@@ -123,7 +118,7 @@
 
             <hr>
 
-            <div>
+            <div style="margin-top: 2%;">
                 Schnelligkeit
                 <select id="scroll-speed">
                     <option value="2">Slow</option>
@@ -134,7 +129,7 @@
                 </select>
             </div>
 
-            <div>
+            <div style="margin-top: 2%;">
                 Simulationsschnelligkeit
                 <select id="sim-speed">
                     <option value="40">Sher langsam</option>
@@ -147,7 +142,7 @@
         </div>
     </div>
 
-    <p class="vcr text-unten">Red bird is the best individual of the last generation. Yellow birds are other birds of the last generation. Blue birds are new-born birds. <a href="https://youtu.be/xvFZjo5PgG0">Link</a></p>
-    <p class="vcr text-unten">Note: The changes of the "*" options will be effective only after the current generation is over; The changes of the "**" options will be effective only for new-born birds.</p>
+    <p class="vcr text-unten">Der rote Vogel ist das beste Beispiel aus der letzten Generation. Gelbe Vögel sind andere Vögel der letzten Generation. Blaue Vögel sind neugeborene Vögel. <a href="https://youtu.be/xvFZjo5PgG0">Link</a></p>
+    <p class="vcr text-unten" style="paddingn-bottom: 10%">Hinweis: Die Änderungen der "*"-Optionen werden erst nach Ablauf der aktuellen Generation wirksam; die Änderungen der "**"-Optionen werden nur für neugeborene Vögel wirksam.</p>
 </body>
 </html>
